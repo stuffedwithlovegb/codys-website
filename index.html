@@ -3,27 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vantage Aerial — Drone Mapping, Inspection & Imaging</title>
-<meta name="description" content="Vantage Aerial provides drone mapping, inspections, construction progress monitoring, real estate photography, storm damage assessment, and 3D modeling.">
+<title>White Bison Enterprises — Drone Mapping, Inspection & Imaging</title>
+<meta name="description" content="White Bison Enterprises provides drone mapping, inspections, construction progress monitoring, real estate photography, storm damage assessment, and 3D modeling.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- ===========================
-     Flight path signature element
-     A vertical route line with waypoint markers, one per section.
-     Hidden on mobile via CSS.
+     Horizon signature element
+     A soft glowing vertical line with waypoint markers, one per section —
+     evokes a horizon glow rather than a tactical readout.
 =========================== -->
-<div class="flight-line" aria-hidden="true">
-    <svg width="2" height="100%" style="position:absolute; left:50%; transform:translateX(-50%);">
-        <line x1="1" y1="0" x2="1" y2="100%" stroke="var(--line)" stroke-width="2" stroke-dasharray="2 8"/>
-    </svg>
-</div>
+<div class="horizon-line" aria-hidden="true"></div>
 
 <!-- ===========================
      Navigation
@@ -32,19 +28,13 @@
     <div class="nav-inner">
         <a href="#home" class="logo">
             <span class="logo-mark" aria-hidden="true">
-                <svg viewBox="0 0 40 40" width="28" height="28">
-                    <circle cx="20" cy="20" r="3" fill="var(--beacon)"/>
-                    <circle cx="6" cy="8" r="2.5" fill="var(--text)"/>
-                    <circle cx="34" cy="8" r="2.5" fill="var(--text)"/>
-                    <circle cx="6" cy="32" r="2.5" fill="var(--text)"/>
-                    <circle cx="34" cy="32" r="2.5" fill="var(--text)"/>
-                    <line x1="20" y1="20" x2="6" y2="8" stroke="var(--text)" stroke-width="1.5"/>
-                    <line x1="20" y1="20" x2="34" y2="8" stroke="var(--text)" stroke-width="1.5"/>
-                    <line x1="20" y1="20" x2="6" y2="32" stroke="var(--text)" stroke-width="1.5"/>
-                    <line x1="20" y1="20" x2="34" y2="32" stroke="var(--text)" stroke-width="1.5"/>
+                <svg viewBox="0 0 44 36" width="30" height="26">
+                    <path d="M22 4 C 17 4 15 9 15 12 C 11 11 6 12 4 16 C 8 16 11 17 12 19 C 9 21 7 25 7 29 C 11 27 15 25 18 25 L 26 25 C 29 25 33 27 37 29 C 37 25 35 21 32 19 C 33 17 36 16 40 16 C 38 12 33 11 29 12 C 29 9 27 4 22 4 Z"
+                          fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+                    <path d="M17 12 L 15 6 M 27 12 L 29 6" stroke="var(--gold)" stroke-width="1.4" fill="none"/>
                 </svg>
             </span>
-            <span class="logo-text">VANTAGE<span class="logo-text-accent">AERIAL</span></span>
+            <span class="logo-text">WHITE BISON<span class="logo-text-accent">ENTERPRISES</span></span>
         </a>
 
         <nav class="nav-links">
@@ -85,8 +75,8 @@
         </div>
 
         <h1 class="hero-headline">
-            Eyes in the sky.<br>
-            Data on the ground.
+            Rare in the field.<br>
+            Unmistakable from above.
         </h1>
 
         <p class="hero-sub">
@@ -108,7 +98,7 @@
 <section id="services" class="services">
     <div class="section-marker">
         <span class="coord">44.51N / -88.01W</span>
-        <span class="marker-title">Mission Types</span>
+        <span class="marker-title">What We Fly</span>
     </div>
 
     <div class="section-header">
@@ -169,7 +159,7 @@
 <section id="work" class="work">
     <div class="section-marker">
         <span class="coord">44.51N / -88.01W</span>
-        <span class="marker-title">Flight Log</span>
+        <span class="marker-title">Recent Ground Covered</span>
     </div>
 
     <div class="section-header">
@@ -199,10 +189,11 @@
     <div class="about-inner">
         <h2>Who's flying</h2>
         <p>
-            Vantage Aerial is a licensed drone operation built around one idea:
-            the view from above makes hard jobs easier. Whether that's a roof
-            no one wants to climb, a job site that needs a weekly record, or a
-            property that photographs better from 200 feet up — that's the job.
+            White Bison Enterprises is a licensed drone operation built around
+            one idea: the view from above makes hard jobs easier. Whether
+            that's a roof no one wants to climb, a job site that needs a
+            weekly record, or a property that photographs better from 200 feet
+            up — that's the job.
         </p>
         <p>
             Fully insured, FAA Part 107 certified, and equipped for mapping,
@@ -258,7 +249,7 @@
         </form>
 
         <div class="contact-direct">
-            <a href="mailto:hello@vantageaerial.com">hello@vantageaerial.com</a>
+            <a href="mailto:hello@whitebisonenterprises.com">hello@whitebisonenterprises.com</a>
             <span class="contact-sep">/</span>
             <a href="tel:+15550000000">(555) 000-0000</a>
         </div>
@@ -272,7 +263,7 @@
 =========================== -->
 <footer class="site-footer">
     <div class="footer-inner">
-        <span>© 2026 Vantage Aerial. FAA Part 107 Certified.</span>
+        <span>© 2026 White Bison Enterprises. FAA Part 107 Certified.</span>
         <div class="footer-links">
             <a href="#services">Services</a>
             <a href="#work">Work</a>
