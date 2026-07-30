@@ -1,19 +1,24 @@
 /* ===========================
-   Design Tokens
+   Design Tokens — White Bison Enterprises
+   Palette drawn from the animal itself: ivory hide, prairie earth,
+   big open sky, and the warm gold of something rare catching the light.
 =========================== */
 :root {
-    --bg: #10161C;
-    --bg-alt: #161F27;
-    --bg-card: #1A2530;
-    --terrain: #7C8B52;
-    --terrain-light: #9AAE6C;
-    --beacon: #E8871E;
-    --beacon-light: #F4A94D;
-    --text: #F2EFE7;
-    --text-dim: #9BA8AD;
-    --line: #2A343B;
+    --bg: #171310;
+    --bg-alt: #201A14;
+    --bg-card: #251E17;
+    --ivory: #F2ECDD;
+    --ivory-dim: #D8CEB8;
+    --gold: #C89B3C;
+    --gold-light: #E0B75C;
+    --sky: #5C7A8A;
+    --sky-light: #82A0AE;
+    --text: #F2ECDD;
+    --text-dim: #A99C87;
+    --line: #3A3025;
 
-    --font-display: 'IBM Plex Mono', monospace;
+    --font-display: 'Fraunces', serif;
+    --font-mono: 'IBM Plex Mono', monospace;
     --font-body: 'Manrope', sans-serif;
 
     --max-width: 1180px;
@@ -44,8 +49,8 @@ body {
     line-height: 1.6;
     font-size: 16px;
     background-image:
-        radial-gradient(circle at 20% 15%, rgba(124,139,82,0.06) 0%, transparent 40%),
-        radial-gradient(circle at 85% 60%, rgba(232,135,30,0.05) 0%, transparent 45%);
+        radial-gradient(circle at 18% 12%, rgba(200,155,60,0.08) 0%, transparent 42%),
+        radial-gradient(circle at 88% 65%, rgba(92,122,138,0.07) 0%, transparent 48%);
 }
 
 a {
@@ -54,7 +59,7 @@ a {
 }
 
 :focus-visible {
-    outline: 2px solid var(--beacon);
+    outline: 2px solid var(--gold);
     outline-offset: 3px;
 }
 
@@ -77,7 +82,7 @@ p {
 
 .btn {
     display: inline-block;
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.85rem;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -89,13 +94,13 @@ p {
 }
 
 .btn-primary {
-    background: var(--beacon);
-    color: #10161C;
+    background: var(--gold);
+    color: #171310;
     font-weight: 600;
 }
 
 .btn-primary:hover {
-    background: var(--beacon-light);
+    background: var(--gold-light);
     transform: translateY(-1px);
 }
 
@@ -106,25 +111,35 @@ p {
 }
 
 .btn-ghost:hover {
-    border-color: var(--terrain-light);
-    color: var(--terrain-light);
+    border-color: var(--sky-light);
+    color: var(--sky-light);
 }
 
 /* ===========================
-   Flight path signature element
+   Horizon signature element
+   A soft vertical glow rather than a hard tactical line —
+   the light along a prairie horizon, not a flight path.
 =========================== */
-.flight-line {
+.horizon-line {
     position: fixed;
     top: 0;
     left: 48px;
-    width: 2px;
+    width: 1px;
     height: 100%;
     z-index: 1;
     pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(200,155,60,0.35) 15%,
+        rgba(200,155,60,0.12) 50%,
+        rgba(92,122,138,0.25) 85%,
+        transparent 100%
+    );
 }
 
 @media (max-width: 900px) {
-    .flight-line {
+    .horizon-line {
         display: none;
     }
 }
@@ -136,7 +151,7 @@ p {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(16, 22, 28, 0.9);
+    background: rgba(23, 19, 16, 0.9);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--line);
 }
@@ -157,39 +172,42 @@ p {
 }
 
 .logo-text {
-    font-family: var(--font-display);
-    font-size: 0.95rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
     letter-spacing: 0.08em;
     font-weight: 600;
 }
 
 .logo-text-accent {
-    color: var(--beacon);
+    display: block;
+    color: var(--gold);
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
     gap: 32px;
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.85rem;
     letter-spacing: 0.03em;
 }
 
 .nav-links a:not(.nav-cta):hover {
-    color: var(--terrain-light);
+    color: var(--sky-light);
 }
 
 .nav-cta {
-    background: var(--beacon);
-    color: #10161C;
+    background: var(--gold);
+    color: #171310;
     padding: 9px 18px;
     border-radius: 2px;
     font-weight: 600;
 }
 
 .nav-cta:hover {
-    background: var(--beacon-light);
+    background: var(--gold-light);
 }
 
 .mobile-toggle {
@@ -229,7 +247,7 @@ p {
     display: none;
     flex-direction: column;
     padding: 0 32px 20px;
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.95rem;
 }
 
@@ -276,7 +294,7 @@ p {
         linear-gradient(var(--line) 1px, transparent 1px),
         linear-gradient(90deg, var(--line) 1px, transparent 1px);
     background-size: 64px 64px;
-    opacity: 0.35;
+    opacity: 0.25;
     mask-image: radial-gradient(ellipse at 30% 30%, black 0%, transparent 70%);
     z-index: 0;
 }
@@ -288,7 +306,7 @@ p {
 }
 
 .hero-readout {
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.78rem;
     letter-spacing: 0.05em;
     color: var(--text-dim);
@@ -300,7 +318,7 @@ p {
 }
 
 .readout-label {
-    color: var(--terrain-light);
+    color: var(--sky-light);
 }
 
 .readout-value {
@@ -308,7 +326,7 @@ p {
 }
 
 .readout-live {
-    color: var(--beacon);
+    color: var(--gold);
 }
 
 .readout-sep {
@@ -316,9 +334,10 @@ p {
 }
 
 .hero-headline {
-    font-size: clamp(2.4rem, 5vw, 4rem);
-    line-height: 1.08;
+    font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+    line-height: 1.05;
     margin-bottom: 24px;
+    font-weight: 600;
 }
 
 .hero-sub {
@@ -365,8 +384,8 @@ section {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: var(--beacon);
-    box-shadow: 0 0 0 4px rgba(232,135,30,0.15);
+    background: var(--gold);
+    box-shadow: 0 0 0 4px rgba(200,155,60,0.15);
 }
 
 @media (max-width: 900px) {
@@ -376,16 +395,16 @@ section {
 }
 
 .coord {
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.72rem;
     color: var(--text-dim);
     letter-spacing: 0.03em;
 }
 
 .marker-title {
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.72rem;
-    color: var(--terrain-light);
+    color: var(--sky-light);
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -396,7 +415,7 @@ section {
 }
 
 .section-header h2 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-size: clamp(1.7rem, 3.2vw, 2.3rem);
     margin-bottom: 14px;
 }
 
@@ -434,21 +453,21 @@ section {
 }
 
 .mission-card:hover {
-    border-color: var(--terrain);
+    border-color: var(--gold);
     transform: translateY(-3px);
 }
 
 .mission-tag {
     display: inline-block;
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.72rem;
-    color: var(--beacon);
+    color: var(--gold);
     letter-spacing: 0.05em;
     margin-bottom: 14px;
 }
 
 .mission-card h3 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     margin-bottom: 10px;
 }
 
@@ -490,7 +509,7 @@ section {
 }
 
 .work-tile span {
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--text-dim);
     letter-spacing: 0.03em;
@@ -504,7 +523,7 @@ section {
 }
 
 .about-inner h2 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-size: clamp(1.7rem, 3.2vw, 2.3rem);
     margin-bottom: 22px;
 }
 
@@ -525,7 +544,7 @@ section {
 }
 
 .contact-inner h2 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-size: clamp(1.7rem, 3.2vw, 2.3rem);
     margin-bottom: 14px;
 }
 
@@ -548,11 +567,11 @@ section {
 }
 
 .form-row label {
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--terrain-light);
+    color: var(--sky-light);
 }
 
 .form-row input,
@@ -571,12 +590,12 @@ section {
 .form-row input:focus,
 .form-row select:focus,
 .form-row textarea:focus {
-    border-color: var(--beacon);
+    border-color: var(--gold);
     outline: none;
 }
 
 .contact-direct {
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.9rem;
     color: var(--text-dim);
     display: flex;
@@ -585,7 +604,7 @@ section {
 }
 
 .contact-direct a:hover {
-    color: var(--beacon-light);
+    color: var(--gold-light);
 }
 
 .contact-sep {
@@ -608,7 +627,7 @@ section {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 16px;
-    font-family: var(--font-display);
+    font-family: var(--font-mono);
     font-size: 0.8rem;
     color: var(--text-dim);
 }
@@ -619,5 +638,5 @@ section {
 }
 
 .footer-links a:hover {
-    color: var(--beacon-light);
+    color: var(--gold-light);
 }
