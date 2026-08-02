@@ -1,117 +1,310 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>White Buffalo Enterprises | Drone Mapping, Inspection & Imaging</title>
-  <meta name="description" content="Drone mapping, inspections, and aerial imaging for people who need the whole picture.">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>White Buffalo Enterprises — Drone Mapping, Inspection & Imaging</title>
+<meta name="description" content="White Buffalo Enterprises provides drone mapping, inspections, construction progress monitoring, real estate photography, storm damage assessment, and 3D modeling.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="White Buffalo Enterprises home">
-      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-      <span>White Buffalo Enterprises</span>
-    </a>
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false"><i></i><i></i></button>
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a class="nav-cta" href="#contact">Get a Quote</a>
+
+<!-- ===========================
+     Horizon signature element
+     A soft glowing vertical line with waypoint markers, one per section —
+     evokes a horizon glow rather than a tactical readout.
+=========================== -->
+<div class="horizon-line" aria-hidden="true"></div>
+
+<!-- ===========================
+     Navigation
+=========================== -->
+<header class="site-nav">
+    <div class="nav-inner">
+        <a href="#home" class="logo">
+            <span class="logo-mark" aria-hidden="true">
+                <svg viewBox="0 0 44 36" width="30" height="26">
+                    <path d="M22 4 C 17 4 15 9 15 12 C 11 11 6 12 4 16 C 8 16 11 17 12 19 C 9 21 7 25 7 29 C 11 27 15 25 18 25 L 26 25 C 29 25 33 27 37 29 C 37 25 35 21 32 19 C 33 17 36 16 40 16 C 38 12 33 11 29 12 C 29 9 27 4 22 4 Z"
+                          fill="none" stroke="var(--gold)" stroke-width="1.4"/>
+                    <path d="M17 12 L 15 6 M 27 12 L 29 6" stroke="var(--gold)" stroke-width="1.4" fill="none"/>
+                </svg>
+            </span>
+            <span class="logo-text">WHITE BUFFALO<span class="logo-text-accent">ENTERPRISES</span></span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact" class="nav-cta">Get a Quote</a>
+        </nav>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Get a Quote</a>
     </nav>
-  </header>
+</header>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-image" aria-hidden="true"></div>
-      <div class="contour contour-one" aria-hidden="true"></div>
-      <div class="hero-content">
-        <p class="eyebrow">Aerial perspective • Grounded insight</p>
-        <h1>See the land differently.</h1>
-        <p class="hero-copy">Drone mapping, inspections, and aerial imaging for people who need the whole picture.</p>
+<main>
+
+<!-- ===========================
+     Hero
+=========================== -->
+<section id="home" class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+        <div class="hero-readout">
+            <span class="readout-label">ALT</span><span class="readout-value">120M</span>
+            <span class="readout-sep">/</span>
+            <span class="readout-label">GPS</span><span class="readout-value">LOCKED</span>
+            <span class="readout-sep">/</span>
+            <span class="readout-label">STATUS</span><span class="readout-value readout-live">LIVE</span>
+        </div>
+
+        <h1 class="hero-headline">
+            Rare in the field.<br>
+            Unmistakable from above.
+        </h1>
+
+        <p class="hero-sub">
+            Drone mapping, inspections, and imaging for builders, agents,
+            insurers, and landowners who need to see the whole picture —
+            and the details inside it.
+        </p>
+
         <div class="hero-actions">
-          <a class="button button-primary" href="#contact">Get a Quote</a>
-          <a class="button button-secondary" href="#work">See Our Work</a>
+            <a href="#contact" class="btn btn-primary">Get a Quote</a>
+            <a href="#work" class="btn btn-ghost">See the Work</a>
         </div>
-      </div>
-      <div class="service-ribbon" aria-label="Primary services"><span>Mapping</span><span>Inspections</span><span>Aerial Imaging</span></div>
-    </section>
+    </div>
+</section>
 
-    <section class="intro section-shell" id="about">
-      <div class="section-kicker"><span>Our perspective</span></div>
-      <div class="intro-grid">
-        <h2>Clarity from above.<br>Respect for what's below.</h2>
-        <div class="intro-copy">
-          <p>White Buffalo Enterprises provides focused aerial services for builders, property owners, agents, and organizations that need dependable visual information.</p>
-          <p>Every project begins with the same principle: understand the land, define the need, and capture only what helps move the work forward.</p>
+<!-- ===========================
+     Services / Mission Types
+=========================== -->
+<section id="services" class="services">
+    <div class="section-marker">
+        <span class="coord">44.51N / -88.01W</span>
+        <span class="marker-title">What We Fly</span>
+    </div>
+
+    <div class="section-header">
+        <h2>Seven ways to put a drone to work</h2>
+        <p>Every job starts the same way: fly, capture, deliver — the output changes depending on what you need to see.</p>
+    </div>
+
+    <div class="mission-grid">
+
+        <article class="mission-card">
+            <span class="mission-tag">MAP-01</span>
+            <h3>Mapping &amp; Orthomosaics</h3>
+            <p>Stitched aerial maps and georeferenced imagery for land surveys, site planning, and large-area documentation.</p>
+        </article>
+
+        <article class="mission-card">
+            <span class="mission-tag">INSP-02</span>
+            <h3>Inspections</h3>
+            <p>Roofs, towers, solar arrays, and hard-to-reach structures — inspected without scaffolding, lifts, or risk.</p>
+        </article>
+
+        <article class="mission-card">
+            <span class="mission-tag">CNST-03</span>
+            <h3>Construction Progress</h3>
+            <p>Recurring flyovers that track a site from groundbreak to completion, delivered on whatever schedule the job needs.</p>
+        </article>
+
+        <article class="mission-card">
+            <span class="mission-tag">REAL-04</span>
+            <h3>Real Estate</h3>
+            <p>Listing photography and video that shows a property's scale, lot lines, and surroundings — not just the front door.</p>
+        </article>
+
+        <article class="mission-card">
+            <span class="mission-tag">PHOTO-05</span>
+            <h3>Photography &amp; Video</h3>
+            <p>Aerial stills and motion for events, brands, and projects that need a perspective a ground camera can't get.</p>
+        </article>
+
+        <article class="mission-card">
+            <span class="mission-tag">STRM-06</span>
+            <h3>Storm Damage Response</h3>
+            <p>Fast, documented flyovers after severe weather — built for insurance claims and rapid damage assessment.</p>
+        </article>
+
+        <article class="mission-card">
+            <span class="mission-tag">3D-07</span>
+            <h3>3D Modeling</h3>
+            <p>Photogrammetry-based 3D models of structures and terrain, built from overlapping aerial capture.</p>
+        </article>
+
+    </div>
+</section>
+
+<!-- ===========================
+     Work / Gallery
+=========================== -->
+<section id="work" class="work">
+    <div class="section-marker">
+        <span class="coord">44.51N / -88.01W</span>
+        <span class="marker-title">Recent Ground Covered</span>
+    </div>
+
+    <div class="section-header">
+        <h2>Recent flights</h2>
+        <p>A sample of the work — swap these placeholders for your own captures.</p>
+    </div>
+
+    <div class="work-grid">
+        <div class="work-tile"><span>Add photo<br>01</span></div>
+        <div class="work-tile"><span>Add photo<br>02</span></div>
+        <div class="work-tile"><span>Add photo<br>03</span></div>
+        <div class="work-tile"><span>Add photo<br>04</span></div>
+        <div class="work-tile"><span>Add photo<br>05</span></div>
+        <div class="work-tile"><span>Add photo<br>06</span></div>
+    </div>
+</section>
+
+<!-- ===========================
+     About
+=========================== -->
+<section id="about" class="about">
+    <div class="section-marker">
+        <span class="coord">44.51N / -88.01W</span>
+        <span class="marker-title">Pilot Log</span>
+    </div>
+
+    <div class="about-inner">
+        <h2>Who's flying</h2>
+        <p>
+            White Buffalo Enterprises is a licensed drone operation built around
+            one idea: the view from above makes hard jobs easier. Whether
+            that's a roof no one wants to climb, a job site that needs a
+            weekly record, or a property that photographs better from 200 feet
+            up — that's the job.
+        </p>
+        <p>
+            <!-- Placeholder: add your own family story here, in your own
+                 words, once you've got it. This is the right place for it —
+                 not borrowed symbolism, your actual history. -->
+            The name carries real family history — [add your own story here].
+        </p>
+        <p>
+            Fully insured, FAA Part 107 certified, and equipped for mapping,
+            thermal, and high-resolution photo and video capture.
+        </p>
+    </div>
+</section>
+
+<!-- ===========================
+     Contact
+=========================== -->
+<section id="contact" class="contact">
+    <div class="section-marker">
+        <span class="coord">44.51N / -88.01W</span>
+        <span class="marker-title">Request Flight</span>
+    </div>
+
+    <div class="contact-inner">
+        <h2>Get a quote</h2>
+        <p>Tell me about the site, the job, and the timeline — I'll get back to you with availability and pricing.</p>
+
+        <form class="contact-form" id="contactForm">
+            <div class="form-row">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                    <option value="mapping">Mapping &amp; Orthomosaics</option>
+                    <option value="inspection">Inspections</option>
+                    <option value="construction">Construction Progress</option>
+                    <option value="realestate">Real Estate</option>
+                    <option value="photo">Photography &amp; Video</option>
+                    <option value="storm">Storm Damage Response</option>
+                    <option value="3d">3D Modeling</option>
+                    <option value="other">Something Else</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <label for="details">Project Details</label>
+                <textarea id="details" name="details" rows="4" placeholder="Location, timeline, site size, anything useful to know."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Request</button>
+        </form>
+
+        <div class="contact-direct">
+            <a href="mailto:hello@whitebuffaloenterprises.com">hello@whitebuffaloenterprises.com</a>
+            <span class="contact-sep">/</span>
+            <a href="tel:+15550000000">(555) 000-0000</a>
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="services section-shell" id="services">
-      <div class="section-kicker"><span>What we do</span></div>
-      <div class="section-heading"><h2>A wider view of the work.</h2><p>Flexible aerial services shaped around the site, the question, and the final deliverable.</p></div>
-      <div class="services-grid">
-        <article class="service-card"><span class="service-number">01</span><h3>Mapping &amp; Orthomosaics</h3><p>Georeferenced aerial imagery for land documentation, planning, and a clearer view of large sites.</p></article>
-        <article class="service-card"><span class="service-number">02</span><h3>Inspections</h3><p>Detailed aerial views of roofs, structures, towers, and other hard-to-reach areas.</p></article>
-        <article class="service-card"><span class="service-number">03</span><h3>Construction Progress</h3><p>Consistent site imagery that records progress from the first day through completion.</p></article>
-        <article class="service-card"><span class="service-number">04</span><h3>Real Estate</h3><p>Aerial photography and video that reveal a property's scale, setting, and surroundings.</p></article>
-        <article class="service-card"><span class="service-number">05</span><h3>Photography &amp; Video</h3><p>A broader perspective for land, events, brands, and projects that deserve to be seen fully.</p></article>
-        <article class="service-card"><span class="service-number">06</span><h3>Storm Documentation</h3><p>Timely aerial documentation that helps make visible damage easier to review and understand.</p></article>
-        <article class="service-card"><span class="service-number">07</span><h3>3D Modeling</h3><p>Overlapping aerial capture transformed into useful three-dimensional views of terrain and structures.</p></article>
-      </div>
-    </section>
+</main>
 
-    <section class="work section-shell" id="work">
-      <div class="section-kicker"><span>Selected work</span></div>
-      <div class="section-heading split"><h2>Ground covered.</h2><p>Project photography will live here as White Buffalo Enterprises builds its field portfolio.</p></div>
-      <div class="work-grid">
-        <div class="work-card work-card-1"><span>01</span><strong>Mapping</strong></div>
-        <div class="work-card work-card-2"><span>02</span><strong>Inspection</strong></div>
-        <div class="work-card work-card-3"><span>03</span><strong>Progress</strong></div>
-        <div class="work-card work-card-4"><span>04</span><strong>Real Estate</strong></div>
-        <div class="work-card work-card-5"><span>05</span><strong>Aerial Imaging</strong></div>
-        <div class="work-card work-card-6"><span>06</span><strong>3D Capture</strong></div>
-      </div>
-    </section>
-
-    <section class="contact section-shell" id="contact">
-      <div class="contact-copy">
-        <div class="section-kicker light"><span>Start a conversation</span></div>
-        <h2>Tell us what you need to see.</h2>
-        <p>Share the location, timeline, and the question you need the flight to answer. We'll help shape the right approach.</p>
-      </div>
-      <form class="contact-form" id="contactForm">
-        <div class="field-pair">
-          <label>Name<input name="name" type="text" autocomplete="name" required></label>
-          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+<!-- ===========================
+     Footer
+=========================== -->
+<footer class="site-footer">
+    <div class="footer-inner">
+        <span>© 2026 White Buffalo Enterprises. FAA Part 107 Certified.</span>
+        <div class="footer-links">
+            <a href="#services">Services</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
         </div>
-        <label>Service needed<select name="service" required><option value="" disabled selected>Select a service</option><option>Mapping &amp; Orthomosaics</option><option>Inspections</option><option>Construction Progress</option><option>Real Estate</option><option>Photography &amp; Video</option><option>Storm Documentation</option><option>3D Modeling</option><option>Something else</option></select></label>
-        <label>Project details<textarea name="details" rows="5" placeholder="Location, timeline, site size, and what you need to understand."></textarea></label>
-        <button class="button button-primary" type="submit">Send Request</button>
-        <p class="form-note" id="formNote" role="status" hidden>The design is ready. Connect this form to the company's email or form service before launch.</p>
-      </form>
-    </section>
-  </main>
+    </div>
+</footer>
 
-  <footer>
-    <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span><span>White Buffalo Enterprises</span></a>
-    <p>Drone mapping, inspections, and aerial imaging.</p><a href="#home">Back to top ↑</a>
-  </footer>
+<script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', String(open));
+    mobileToggle.addEventListener('click', function () {
+        const isOpen = mobileMenu.classList.toggle('active');
+        mobileToggle.classList.toggle('active', isOpen);
+        mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
-    menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      menu.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }));
-    document.getElementById('contactForm').addEventListener('submit', event => {
-      event.preventDefault();
-      document.getElementById('formNote').hidden = false;
+
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+            mobileMenu.classList.remove('active');
+            mobileToggle.classList.remove('active');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+        });
     });
-  </script>
+
+    // Placeholder submit handler — this is a static site (e.g. GitHub Pages),
+    // so there's no backend to actually send this form anywhere yet.
+    // See the note at the end of the chat response for how to wire this up
+    // (Formspree, Netlify Forms, etc.) with a couple lines of config.
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        alert('This form needs to be connected to a form service (like Formspree) before it can actually send — see setup notes.');
+    });
+</script>
+
 </body>
 </html>
